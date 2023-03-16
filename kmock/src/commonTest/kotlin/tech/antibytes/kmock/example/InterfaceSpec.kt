@@ -10,6 +10,8 @@ import kotlin.js.JsName
 import kotlin.test.Test
 import tech.antibytes.kfixture.fixture
 import tech.antibytes.kfixture.kotlinFixture
+import tech.antibytes.kmock.KMock
+import tech.antibytes.kmock.KMockExperimental
 import tech.antibytes.kmock.MockCommon
 import tech.antibytes.kmock.verification.Asserter
 import tech.antibytes.kmock.verification.assertOrder
@@ -22,7 +24,8 @@ interface Interface2 {
     fun doNothing(): Unit
 }
 
-@MockCommon(Interface2::class)
+@OptIn(KMockExperimental::class)
+@KMock(Interface2::class)
 class InterfaceSpec {
     private val fixture = kotlinFixture()
 

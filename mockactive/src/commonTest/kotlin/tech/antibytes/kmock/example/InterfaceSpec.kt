@@ -29,6 +29,7 @@ class InterfaceSpec {
         // Given
         val arg0: Int = fixture.fixture()
         val arg1: Any = fixture.fixture()
+        //
 
         given(mock).invocation { doSomething() }.then { fixture.fixture() }
         given(mock).invocation { doSomethingElse(arg0, arg1) }.then { fixture.fixture() }
