@@ -1,0 +1,42 @@
+[versions]
+## SDK Versions
+minSdk = "21"
+
+## Libs
+## [KFixture](https://github.com/bitPogo/kfixture)
+kfixture =  "0.4.0-SNAPSHOT"
+## [Test-Utils](https://github.com/bitPogo/test-utils-kmp)
+testUtils =  "f384302"
+## [KMock](https://github.com/bitPogo/kmock)
+kmock = "0.3.0-rc05-bump-kotlin-SNAPSHOT"
+## [Mockactive](https://github.com/mockative/mockative)
+mockactive = "1.3.1"
+## [MocKMP](https://github.com/kosi-libs/MocKMP)
+mockmp = "1.11.0"
+## []()
+ksp = "1.7.22-1.0.8"
+## [Base64](https://github.com/05nelsonm/encoding)
+base64 = "1.2.1"
+
+[libraries]
+kfixture = { module = "tech.antibytes.kfixture:core", version.ref = "kfixture" }
+testUtils-core = { module = "tech.antibytes.test-utils-kmp:test-utils", version.ref = "testUtils" }
+testUtils-annotations = { module = "tech.antibytes.test-utils-kmp:test-utils-annotations-junit4", version.ref = "testUtils" }
+testUtils-coroutine = { module = "tech.antibytes.test-utils-kmp:test-utils-coroutine", version.ref = "testUtils" }
+kmock = { module = "tech.antibytes.kmock:kmock", version.ref = "kmock" }
+gradle-kmock = { module = "tech.antibytes.kmock:kmock-gradle", version.ref = "kmock" }
+
+ksp-api = { module = "com.google.devtools.ksp:symbol-processing-api", version.ref = "ksp" }
+gradle-ksp = { module = "com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
+
+mockmp-runtime = { module = "org.kodein.mock:mockmp-runtime", version.ref = "mockmp" }
+mockmp-processor = { module = "org.kodein.mock:mockmp-processor", version.ref = "mockmp" }
+
+mockactive-runtime = { module = "io.mockative:mockative", version.ref = "mockactive" }
+mockactive-processor = { module = "io.mockative:mockative-processor", version.ref = "mockactive" }
+
+base64 = { module = "io.matthewnelson.kotlin-components:encoding-base64", version.ref = "base64" }
+
+[plugins]
+kmock = { id = "tech.antibytes.kmock.kmock-gradle", version.ref = "kmock" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
